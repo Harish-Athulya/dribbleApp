@@ -1,6 +1,13 @@
 import 'package:dribble/util/emoticon_face.dart';
 import 'package:dribble/util/exercise_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
+var now = new DateTime.now();
+var formatter = new DateFormat.yMd();
+final String formattedDate = DateFormat('dd MMM yyyy').format(now);
+
+// String formattedDate = "";
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,6 +17,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  /* var _now = DateTime.now();
+  var _formatter = new DateFormat('dd-MMM-yyyy');
+  String formattedDate = _formatter.format(_now);
+ */
+  // print(formattedDate); // 2016-01-25
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                             height: 8,
                           ),
                           Text(
-                            '24 Aug, 2022',
+                            formattedDate,
                             style: TextStyle(color: Colors.blue[200]),
                           ),
                         ],
@@ -121,58 +134,61 @@ class _HomePageState extends State<HomePage> {
 
                   // 4 faces
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(children: [
-                        EmoticonFace(emoticonFace: '❤️'),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
-                          child: Text(
-                            'Like',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                      ]),
-                      Column(
-                        children: [
-                          EmoticonFace(emoticonFace: '😂'),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(children: [
+                          EmoticonFace(emoticonFace: '❤️'),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 10),
                             child: Text(
-                              'Haha',
+                              'Like',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                        ],
-                      ),
-                      Column(children: [
-                        EmoticonFace(emoticonFace: '😎'),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
-                          child: Text(
-                            'Cool',
-                            style: TextStyle(color: Colors.white),
-                          ),
+                        ]),
+                        Column(
+                          children: [
+                            EmoticonFace(emoticonFace: '😂'),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Text(
+                                'Haha',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ],
                         ),
-                      ]),
-                      Column(
-                        children: [
-                          EmoticonFace(emoticonFace: '😔'),
+                        Column(children: [
+                          EmoticonFace(emoticonFace: '😎'),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 10),
                             child: Text(
-                              'Sad',
+                              'Cool',
                               style: TextStyle(color: Colors.white),
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        ]),
+                        Column(
+                          children: [
+                            EmoticonFace(emoticonFace: '😔'),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Text(
+                                'Sad',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        ),
 
-                      // EmoticonFace(emoticonFace: '❤️'),
-                      // EmoticonFace(emoticonFace: '😇'),
-                      // EmoticonFace(emoticonFace: '😎'),
-                    ],
+                        // EmoticonFace(emoticonFace: '❤️'),
+                        // EmoticonFace(emoticonFace: '😇'),
+                        // EmoticonFace(emoticonFace: '😎'),
+                      ],
+                    ),
                   ),
                 ],
               ),
