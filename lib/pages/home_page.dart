@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[800],
+      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
         BottomNavigationBarItem(
@@ -50,9 +50,9 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Hi, Harish!',
+                            'Hi, User!',
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color.fromARGB(255, 29, 102, 142),
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -61,13 +61,14 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Text(
                             formattedDate,
-                            style: TextStyle(color: Colors.blue[200]),
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 222, 52, 128)),
                           ),
                         ],
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.blue[600],
+                          color: Color.fromARGB(255, 222, 52, 128),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         padding: EdgeInsets.all(12),
@@ -84,7 +85,7 @@ class _HomePageState extends State<HomePage> {
 
                   Container(
                     decoration: BoxDecoration(
-                        color: Colors.blue[600],
+                        color: Color.fromARGB(255, 29, 102, 142),
                         borderRadius: BorderRadius.circular(8)),
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
@@ -115,9 +116,9 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'How do you feel',
+                        'How do you feel?',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 29, 102, 142),
                             fontSize: 18,
                             fontWeight: FontWeight.bold),
                       ),
@@ -145,7 +146,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.symmetric(vertical: 10),
                             child: Text(
                               'Like',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 29, 102, 142)),
                             ),
                           ),
                         ]),
@@ -156,7 +158,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.symmetric(vertical: 10),
                               child: Text(
                                 'Haha',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 29, 102, 142)),
                               ),
                             ),
                           ],
@@ -167,7 +170,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.symmetric(vertical: 10),
                             child: Text(
                               'Cool',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 29, 102, 142)),
                             ),
                           ),
                         ]),
@@ -178,7 +182,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.symmetric(vertical: 10),
                               child: Text(
                                 'Sad',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 29, 102, 142)),
                               ),
                             )
                           ],
@@ -218,33 +223,33 @@ class _HomePageState extends State<HomePage> {
                         )
                       ],
                     ),
-                    /* SizedBox(
+                    SizedBox(
                       height: 10,
-                    ), */
+                    ),
                     Expanded(
                       child: ListView(
                         children: [
                           ExerciseTile(
-                            icon: Icons.favorite,
-                            exerciseName: "Speaking Skills",
+                            icon: Icons.nordic_walking,
+                            exerciseName: "Walking",
                             numberOfExercise: 15,
                             customColor: Colors.orange,
                           ),
                           ExerciseTile(
-                            icon: Icons.book,
-                            exerciseName: "Reading Skills",
+                            icon: Icons.accessibility_new_outlined,
+                            exerciseName: "Yoga",
                             numberOfExercise: 41,
                             customColor: Colors.red,
                           ),
                           ExerciseTile(
                             icon: Icons.star_border_purple500_rounded,
-                            exerciseName: "Writing Skills",
+                            exerciseName: "Physiotherapy",
                             numberOfExercise: 35,
                             customColor: Colors.green,
                           ),
                           ExerciseTile(
                             icon: Icons.keyboard,
-                            exerciseName: "Typing Skills",
+                            exerciseName: "Jogging",
                             numberOfExercise: 19,
                             customColor: Colors.purple,
                           ),

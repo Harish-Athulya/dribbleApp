@@ -10,10 +10,11 @@ class EmoticonFace extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
-          height: 100,
-          width: 100,
+          height: 80,
+          width: 80,
           decoration: BoxDecoration(
-              color: Colors.blue[600], borderRadius: BorderRadius.circular(12)),
+              color: Color.fromARGB(255, 29, 102, 142),
+              borderRadius: BorderRadius.circular(12)),
           // padding: EdgeInsets.all(12),
           child: Center(
               child: Text(emoticonFace, style: TextStyle(fontSize: 30)))),
